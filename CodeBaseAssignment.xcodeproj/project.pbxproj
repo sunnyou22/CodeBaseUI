@@ -13,6 +13,11 @@
 		9036039C28B1FA7400ADD4D2 /* ImageContainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9036039B28B1FA7400ADD4D2 /* ImageContainView.xib */; };
 		903603A128B2045400ADD4D2 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903603A028B2045400ADD4D2 /* CollectionViewController.swift */; };
 		903603A328B204EF00ADD4D2 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903603A228B204EF00ADD4D2 /* Protocol.swift */; };
+		903603A728B211FA00ADD4D2 /* ImageSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903603A628B211FA00ADD4D2 /* ImageSearchView.swift */; };
+		903603A928B213F900ADD4D2 /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903603A828B213F900ADD4D2 /* CustomCollectionView.swift */; };
+		903603AB28B21B2700ADD4D2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903603AA28B21B2700ADD4D2 /* APIManager.swift */; };
+		903603AE28B21C0900ADD4D2 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 903603AD28B21C0900ADD4D2 /* SwiftyJSON */; };
+		903603B128B21C1B00ADD4D2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 903603B028B21C1B00ADD4D2 /* Alamofire */; };
 		9051E28628AF6E9D005FE811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9051E28528AF6E9D005FE811 /* AppDelegate.swift */; };
 		9051E28828AF6E9D005FE811 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9051E28728AF6E9D005FE811 /* SceneDelegate.swift */; };
 		9051E28A28AF6E9D005FE811 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9051E28928AF6E9D005FE811 /* ViewController.swift */; };
@@ -36,6 +41,9 @@
 		9036039B28B1FA7400ADD4D2 /* ImageContainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageContainView.xib; sourceTree = "<group>"; };
 		903603A028B2045400ADD4D2 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		903603A228B204EF00ADD4D2 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		903603A628B211FA00ADD4D2 /* ImageSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchView.swift; sourceTree = "<group>"; };
+		903603A828B213F900ADD4D2 /* CustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionView.swift; sourceTree = "<group>"; };
+		903603AA28B21B2700ADD4D2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		9051E28228AF6E9D005FE811 /* CodeBaseAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBaseAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9051E28528AF6E9D005FE811 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9051E28728AF6E9D005FE811 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				903603B128B21C1B00ADD4D2 /* Alamofire in Frameworks */,
+				903603AE28B21C0900ADD4D2 /* SwiftyJSON in Frameworks */,
 				9051E2B928B0D2EE005FE811 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +152,7 @@
 				9036039428B1EE0A00ADD4D2 /* APIKEY.swift */,
 				9036039628B1EF3100ADD4D2 /* URL+Extension.swift */,
 				903603A228B204EF00ADD4D2 /* Protocol.swift */,
+				903603AA28B21B2700ADD4D2 /* APIManager.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -152,6 +163,8 @@
 				9051E2BB28B14420005FE811 /* DiaryViewController.swift */,
 				903603A028B2045400ADD4D2 /* CollectionViewController.swift */,
 				9051E2BD28B14536005FE811 /* DiaryView.swift */,
+				903603A628B211FA00ADD4D2 /* ImageSearchView.swift */,
+				903603A828B213F900ADD4D2 /* CustomCollectionView.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -174,6 +187,8 @@
 			name = CodeBaseAssignment;
 			packageProductDependencies = (
 				9051E2B828B0D2EE005FE811 /* SnapKit */,
+				903603AD28B21C0900ADD4D2 /* SwiftyJSON */,
+				903603B028B21C1B00ADD4D2 /* Alamofire */,
 			);
 			productName = CodeBaseAssignment;
 			productReference = 9051E28228AF6E9D005FE811 /* CodeBaseAssignment.app */;
@@ -205,6 +220,8 @@
 			mainGroup = 9051E27928AF6E9D005FE811;
 			packageReferences = (
 				9051E2B728B0D2EE005FE811 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				903603AC28B21C0900ADD4D2 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				903603AF28B21C1B00ADD4D2 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 9051E28328AF6E9D005FE811 /* Products */;
 			projectDirPath = "";
@@ -237,14 +254,17 @@
 			files = (
 				903603A128B2045400ADD4D2 /* CollectionViewController.swift in Sources */,
 				9051E2BE28B14536005FE811 /* DiaryView.swift in Sources */,
+				903603A728B211FA00ADD4D2 /* ImageSearchView.swift in Sources */,
 				9051E28A28AF6E9D005FE811 /* ViewController.swift in Sources */,
 				903603A328B204EF00ADD4D2 /* Protocol.swift in Sources */,
 				9051E2BC28B14420005FE811 /* DiaryViewController.swift in Sources */,
+				903603A928B213F900ADD4D2 /* CustomCollectionView.swift in Sources */,
 				9051E2A128AF7B16005FE811 /* BaseVC.swift in Sources */,
 				9051E29D28AF6FE6005FE811 /* UIViewCutom.swift in Sources */,
 				9036039728B1EF3100ADD4D2 /* URL+Extension.swift in Sources */,
 				9051E29F28AF7858005FE811 /* BaseView.swift in Sources */,
 				9051E28628AF6E9D005FE811 /* AppDelegate.swift in Sources */,
+				903603AB28B21B2700ADD4D2 /* APIManager.swift in Sources */,
 				9051E28828AF6E9D005FE811 /* SceneDelegate.swift in Sources */,
 				9051E2A328AF7FB1005FE811 /* WriteView.swift in Sources */,
 				9036039528B1EE0A00ADD4D2 /* APIKEY.swift in Sources */,
@@ -468,6 +488,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		903603AC28B21C0900ADD4D2 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		903603AF28B21C1B00ADD4D2 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		9051E2B728B0D2EE005FE811 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -479,6 +515,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		903603AD28B21C0900ADD4D2 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 903603AC28B21C0900ADD4D2 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		903603B028B21C1B00ADD4D2 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 903603AF28B21C1B00ADD4D2 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		9051E2B828B0D2EE005FE811 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9051E2B728B0D2EE005FE811 /* XCRemoteSwiftPackageReference "SnapKit" */;

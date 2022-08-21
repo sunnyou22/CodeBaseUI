@@ -18,10 +18,10 @@ enum EndPoint {
     case photos
     
     
-    func plusEndpointSetFullURL(query: String) -> String {
+    func plusEndpointSetFullURL(query: String, page: Int) -> String {
         switch self {
         case .photos:
-            return URL.makeEndPoint("search/photos?page=5&query=\(query)&client_id=\(APIKEY.UNSPLASH)")
+            return URL.makeEndPoint("search/photos?page=\(page)&query=\(query)&client_id=\(APIKEY.UNSPLASH)")
         }
     }
 }

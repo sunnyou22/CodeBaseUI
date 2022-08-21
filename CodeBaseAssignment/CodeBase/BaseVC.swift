@@ -14,11 +14,13 @@ class BaseViewContoller: UIViewController {
         super.viewDidLoad()
         
         configure()
+        setnavigationBar()
     }
     
     func configure() { }
+    func setnavigationBar() { }
     
-    func setNavigation<T>(storyboard: String, VC: T, completion: @escaping ((T) -> ())) {
+   static func setNavigation<T>(storyboard: String, VC: T, completion: @escaping ((T) -> ())) {
         let sb = UIStoryboard(name: storyboard, bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: String(describing: VC)) as? T else {
             return

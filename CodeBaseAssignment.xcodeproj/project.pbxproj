@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9036039328B1EDE500ADD4D2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9036039228B1EDE500ADD4D2 /* .gitignore */; };
+		9036039528B1EE0A00ADD4D2 /* APIKEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036039428B1EE0A00ADD4D2 /* APIKEY.swift */; };
+		9036039728B1EF3100ADD4D2 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9036039628B1EF3100ADD4D2 /* URL+Extension.swift */; };
+		9036039C28B1FA7400ADD4D2 /* ImageContainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9036039B28B1FA7400ADD4D2 /* ImageContainView.xib */; };
+		903603A128B2045400ADD4D2 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903603A028B2045400ADD4D2 /* CollectionViewController.swift */; };
+		903603A328B204EF00ADD4D2 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903603A228B204EF00ADD4D2 /* Protocol.swift */; };
 		9051E28628AF6E9D005FE811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9051E28528AF6E9D005FE811 /* AppDelegate.swift */; };
 		9051E28828AF6E9D005FE811 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9051E28728AF6E9D005FE811 /* SceneDelegate.swift */; };
 		9051E28A28AF6E9D005FE811 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9051E28928AF6E9D005FE811 /* ViewController.swift */; };
@@ -19,9 +25,17 @@
 		9051E2A328AF7FB1005FE811 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9051E2A228AF7FB1005FE811 /* WriteView.swift */; };
 		9051E2A728AF8BDC005FE811 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9051E2A628AF8BDC005FE811 /* Type.swift */; };
 		9051E2B928B0D2EE005FE811 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9051E2B828B0D2EE005FE811 /* SnapKit */; };
+		9051E2BC28B14420005FE811 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9051E2BB28B14420005FE811 /* DiaryViewController.swift */; };
+		9051E2BE28B14536005FE811 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9051E2BD28B14536005FE811 /* DiaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9036039228B1EDE500ADD4D2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		9036039428B1EE0A00ADD4D2 /* APIKEY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKEY.swift; sourceTree = "<group>"; };
+		9036039628B1EF3100ADD4D2 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		9036039B28B1FA7400ADD4D2 /* ImageContainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageContainView.xib; sourceTree = "<group>"; };
+		903603A028B2045400ADD4D2 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		903603A228B204EF00ADD4D2 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		9051E28228AF6E9D005FE811 /* CodeBaseAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBaseAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9051E28528AF6E9D005FE811 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9051E28728AF6E9D005FE811 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +49,8 @@
 		9051E2A028AF7B16005FE811 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		9051E2A228AF7FB1005FE811 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		9051E2A628AF8BDC005FE811 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		9051E2BB28B14420005FE811 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
+		9051E2BD28B14536005FE811 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,9 +65,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9036039828B1F16D00ADD4D2 /* Assignment */ = {
+			isa = PBXGroup;
+			children = (
+				9051E2A428AF817E005FE811 /* Project */,
+			);
+			path = Assignment;
+			sourceTree = "<group>";
+		};
 		9051E27928AF6E9D005FE811 = {
 			isa = PBXGroup;
 			children = (
+				9036039228B1EDE500ADD4D2 /* .gitignore */,
 				9051E28428AF6E9D005FE811 /* CodeBaseAssignment */,
 				9051E28328AF6E9D005FE811 /* Products */,
 			);
@@ -70,14 +95,16 @@
 			children = (
 				9051E28528AF6E9D005FE811 /* AppDelegate.swift */,
 				9051E28728AF6E9D005FE811 /* SceneDelegate.swift */,
+				9036039828B1F16D00ADD4D2 /* Assignment */,
+				9051E2BA28B13E7B005FE811 /* Diary */,
 				9051E2A528AF8BCB005FE811 /* Constant */,
 				9051E29A28AF6EB8005FE811 /* CodeBase */,
 				9051E29B28AF6FCD005FE811 /* CustomView */,
-				9051E2A428AF817E005FE811 /* Project */,
 				9051E28B28AF6E9D005FE811 /* Main.storyboard */,
 				9051E28E28AF6E9F005FE811 /* Assets.xcassets */,
 				9051E29028AF6E9F005FE811 /* LaunchScreen.storyboard */,
 				9051E29328AF6E9F005FE811 /* Info.plist */,
+				9036039B28B1FA7400ADD4D2 /* ImageContainView.xib */,
 			);
 			path = CodeBaseAssignment;
 			sourceTree = "<group>";
@@ -112,8 +139,21 @@
 			isa = PBXGroup;
 			children = (
 				9051E2A628AF8BDC005FE811 /* Type.swift */,
+				9036039428B1EE0A00ADD4D2 /* APIKEY.swift */,
+				9036039628B1EF3100ADD4D2 /* URL+Extension.swift */,
+				903603A228B204EF00ADD4D2 /* Protocol.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		9051E2BA28B13E7B005FE811 /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				9051E2BB28B14420005FE811 /* DiaryViewController.swift */,
+				903603A028B2045400ADD4D2 /* CollectionViewController.swift */,
+				9051E2BD28B14536005FE811 /* DiaryView.swift */,
+			);
+			path = Diary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +220,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9036039328B1EDE500ADD4D2 /* .gitignore in Resources */,
 				9051E29228AF6E9F005FE811 /* LaunchScreen.storyboard in Resources */,
 				9051E28F28AF6E9F005FE811 /* Assets.xcassets in Resources */,
 				9051E28D28AF6E9D005FE811 /* Main.storyboard in Resources */,
+				9036039C28B1FA7400ADD4D2 /* ImageContainView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,13 +235,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				903603A128B2045400ADD4D2 /* CollectionViewController.swift in Sources */,
+				9051E2BE28B14536005FE811 /* DiaryView.swift in Sources */,
 				9051E28A28AF6E9D005FE811 /* ViewController.swift in Sources */,
+				903603A328B204EF00ADD4D2 /* Protocol.swift in Sources */,
+				9051E2BC28B14420005FE811 /* DiaryViewController.swift in Sources */,
 				9051E2A128AF7B16005FE811 /* BaseVC.swift in Sources */,
 				9051E29D28AF6FE6005FE811 /* UIViewCutom.swift in Sources */,
+				9036039728B1EF3100ADD4D2 /* URL+Extension.swift in Sources */,
 				9051E29F28AF7858005FE811 /* BaseView.swift in Sources */,
 				9051E28628AF6E9D005FE811 /* AppDelegate.swift in Sources */,
 				9051E28828AF6E9D005FE811 /* SceneDelegate.swift in Sources */,
 				9051E2A328AF7FB1005FE811 /* WriteView.swift in Sources */,
+				9036039528B1EE0A00ADD4D2 /* APIKEY.swift in Sources */,
 				9051E2A728AF8BDC005FE811 /* Type.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

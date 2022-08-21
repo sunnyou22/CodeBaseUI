@@ -11,9 +11,11 @@ import UIKit
 class BaseView: UIView {
     
     static let recommandPosterImageSpacing = 16
+    static let diaryDefaultSpacing = 20
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = .systemBackground
         configureUI()
         setConstaints()
     }
@@ -38,5 +40,6 @@ class BaseView: UIView {
 //        gradient.cornerRadius = 35
         layer.addSublayer(gradient)
     }
+    
+    // api통신 이미지뷰 
 }
-

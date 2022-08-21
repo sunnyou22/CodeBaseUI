@@ -7,11 +7,11 @@
 
 import UIKit
 
+//MARK: 버튼 커스텀
 class CustomButtonUI: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-
     }
     
     required init?(coder: NSCoder) {
@@ -31,7 +31,6 @@ class CustomButtonUI: UIButton {
     func setButtonCig(title: String, systemImageString: SystemName?) -> UIButton.Configuration {
         var config = UIButton.Configuration.filled()
         let buttonConfig = UIImage.SymbolConfiguration(pointSize: 20, weight: .semibold)
-       
         
         if let systemImageString = systemImageString {
             config.title = title
@@ -50,6 +49,7 @@ class CustomButtonUI: UIButton {
     }
 }
     
+//MARK: 이미지뷰 커스텀
     class CustomImageView: UIImageView {
         
         override init(frame: CGRect) {
@@ -58,7 +58,12 @@ class CustomButtonUI: UIButton {
         }
         
         required init?(coder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
+            super.init(coder: coder)
+            
+            guard let view = UINib(nibName: "ImageContainView", bundle: nil).instantiate(withOwner: self).first as? UIView else { return }
+            view.frame = bounds
+            view.backgroundColor = .lightGray
+            self.addSubview(view)
         }
         
         func fetchImageURL(url: String) {
@@ -74,3 +79,27 @@ class CustomButtonUI: UIButton {
 //            layer.borderWidth = 2
 //        }
     }
+
+class CustomTextField: UITextField {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+class CustomTextView: UITextView {
+ 
+    override init(frame: CGRect, textContainer: NSTextContainer?) {
+        super.init(frame: frame, textContainer: textContainer)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+        
+}

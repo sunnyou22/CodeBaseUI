@@ -169,18 +169,18 @@ class WriteView: BaseView {
 
         recommandMovieImageView2.snp.makeConstraints { make in
             make.centerX.equalTo(self)
-            self.previewPostrImageLayout(button: recommandMovieImageView2)
+            self.previewPostrImageLayout(image: recommandMovieImageView2)
         }
         
 
         recommandMovieImageView1.snp.makeConstraints { make in
             make.trailing.equalTo(-BaseView.recommandPosterImageSpacing)
-            self.previewPostrImageLayout(button: recommandMovieImageView1)
+            self.previewPostrImageLayout(image: recommandMovieImageView1)
         }
 
         recommandMovieImageView3.snp.makeConstraints { make in
             make.leading.equalTo(BaseView.recommandPosterImageSpacing)
-            self.previewPostrImageLayout(button: recommandMovieImageView3)
+            self.previewPostrImageLayout(image: recommandMovieImageView3)
         }
 
         previewLabel.snp.makeConstraints { make in
@@ -206,11 +206,11 @@ class WriteView: BaseView {
     }
 
 //
-    func previewPostrImageLayout(button: UIImageView){
-        button.snp.makeConstraints { make in
+    func previewPostrImageLayout(image: UIImageView) {
+        image.snp.makeConstraints { make in
             make.bottom.equalTo(self.safeAreaLayoutGuide).offset(-20)
             make.width.equalTo((Int(UIScreen.main.bounds.width) - (BaseView.recommandPosterImageSpacing * 4)) / 3)
-            make.height.equalTo(recommandMovieImageView2.snp.width).multipliedBy(1)
+            make.height.equalTo(image.snp.width).multipliedBy(1)
         }
     }
 }

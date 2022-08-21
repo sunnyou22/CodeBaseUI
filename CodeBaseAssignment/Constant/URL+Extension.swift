@@ -14,9 +14,9 @@ extension URL {
         return baseURL + endpoint
     }
 }
+
 enum EndPoint {
     case photos
-    
     
     func plusEndpointSetFullURL(query: String, page: Int) -> String {
         switch self {

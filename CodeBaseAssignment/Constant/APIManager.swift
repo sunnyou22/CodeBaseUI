@@ -13,10 +13,10 @@ class UnsplashAPIManager {
     
     static let shared = UnsplashAPIManager()
     
-    func callRequst(type: EndPoint, query: String, completionHandler: @escaping (JSON) -> ()) {
+    func callRequst(page: Int, query: String, completionHandler: @escaping (JSON) -> ()) {
         
         guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
-        let url = type.plusEndpointSetFullURL(query: query, page: 1)
+        let url = EndPoint.photos.plusEndpointSetFullURL(query: query, page: page)
         let header: HTTPHeaders = ["Accept-Version" : "v1"]
         
         AF.request(url, method: .get, headers: header).validate().responseData { response in

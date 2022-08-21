@@ -37,9 +37,30 @@ class BaseView: UIView {
         gradient.endPoint = CGPoint(x: 0.5, y: 1.0)
         
         gradient.frame = bounds
-//        gradient.cornerRadius = 35
+        //        gradient.cornerRadius = 35
         layer.addSublayer(gradient)
     }
     
-    // api통신 이미지뷰 
+    // api통신 이미지뷰
+}
+
+class BaseCollectionViewCell: UICollectionViewCell {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        configureUI()
+        setConstraints()
+        setCellLayout()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configureUI() { }
+    func setConstraints() { }
+    
+    @discardableResult
+    func setCellLayout() -> UICollectionViewFlowLayout { return UICollectionViewFlowLayout()}
 }

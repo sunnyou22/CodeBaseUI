@@ -11,58 +11,31 @@ class CollectionViewController: BaseViewContoller {
     
     var perPageImageCount = 10
     
-    var mainView = BaseView()
+    var mainView = ImageSearchView()
     
-    let collectionview: UICollectionView = {
-        print(#function)
-        let layout = UICollectionViewFlowLayout()
-        let spacing: CGFloat = 9
-        let width = UIScreen.main.bounds.width - (spacing * 4)
-        layout.itemSize = CGSize(width: width, height: width)
-        layout.scrollDirection = .vertical
-        layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
-        layout.minimumLineSpacing = spacing
-        layout.minimumInteritemSpacing = spacing
-        
-        var view = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        
-        return view
-    }()
-    
-   lazy var searchview: ImageSearchView = {
-        var view = ImageSearchView()
-        return view
-    }()
-
     override func loadView() {
         self.view = mainView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        [searchview, collectionview].forEach { $0.addSubview(mainView) }
-        collectionview.delegate = self
-        collectionview.dataSource = self
+        
+       
         print(#function)
         
     }
     
     override func configure() {
-        searchview.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(0)
-            make.leading.equalToSuperview().offset(0)
-            make.trailing.equalToSuperview().offset(0)
-            //            make.bottom.equalTo(mainView.safeAreaInsets).offset(0)
-        }
+        mainView.collectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: CustomCollectionViewCell.reusableIdentifier)
+   
+        mainView.searchBar.delegate = self
         
-        collectionview.snp.makeConstraints { make in
-            make.top.equalTo(searchview.snp.bottom).offset(0)
-            make.leading.equalTo(mainView.safeAreaInsets).offset(0)
-            make.trailing.equalTo(mainView.safeAreaInsets).offset(0)
-            make.bottom.equalToSuperview().offset(0)
-        }
+        mainView.collectionView.delegate = self
+        mainView.collectionView.dataSource = self
     }
 }
+
+
 
 extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -76,13 +49,15 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
+    
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.reusableIdentifier, for: indexPath) as? CustomCollectionViewCell else { return UICollectionViewCell()}
         
         cell.backgroundColor = .brown
         
         return cell
     }
-    
+}
+
+extension CollectionViewController: UISearchBarDelegate {
     
 }

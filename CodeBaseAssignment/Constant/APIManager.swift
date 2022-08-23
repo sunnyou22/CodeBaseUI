@@ -15,7 +15,7 @@ class UnsplashAPIManager {
     
     func callRequst(page: Int, query: String, completionHandler: @escaping (JSON) -> ()) {
         
-        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
+//        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
         let url = EndPoint.photos.plusEndpointSetFullURL(query: query, page: page)
         let header: HTTPHeaders = ["Accept-Version" : "v1"]
         
@@ -24,6 +24,7 @@ class UnsplashAPIManager {
             case .success(let value):
                 let json = JSON(value)
                 print(json)
+                print(url)
                 completionHandler(json)
                 
             case .failure(let error):
@@ -32,11 +33,12 @@ class UnsplashAPIManager {
         }
     }
     
-    func requestUnsplashImage(json: JSON, compleHandler: @escaping ([String]) -> ()) {
-        var imageURLString: [String] = []
+    func requestUnsplashImage(json: JSON, compleHandler: @escaping ([URL]) -> ()) {
+        
+        var imageURLString: [URL] = []
         
         json["results"].arrayValue.forEach { json in
-            imageURLString.append(json["urls"]["small"].stringValue)
+            imageURLString.append(json["urls"]["small"].url!)
         }
         compleHandler(imageURLString)
     }

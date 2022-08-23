@@ -13,11 +13,11 @@
 		903603A128B2045400ADD4D2 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903603A028B2045400ADD4D2 /* CollectionViewController.swift */; };
 		903603A328B204EF00ADD4D2 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903603A228B204EF00ADD4D2 /* Protocol.swift */; };
 		903603A728B211FA00ADD4D2 /* ImageSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903603A628B211FA00ADD4D2 /* ImageSearchView.swift */; };
-		903603A928B213F900ADD4D2 /* CustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903603A828B213F900ADD4D2 /* CustomCollectionView.swift */; };
 		903603AB28B21B2700ADD4D2 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903603AA28B21B2700ADD4D2 /* APIManager.swift */; };
 		903603AE28B21C0900ADD4D2 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 903603AD28B21C0900ADD4D2 /* SwiftyJSON */; };
 		903603B128B21C1B00ADD4D2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 903603B028B21C1B00ADD4D2 /* Alamofire */; };
 		903603B328B228CB00ADD4D2 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903603B228B228CB00ADD4D2 /* CustomCollectionViewCell.swift */; };
+		903C537C28B319E200EF8608 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903C537B28B319E200EF8608 /* RealmModel.swift */; };
 		9051E28628AF6E9D005FE811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9051E28528AF6E9D005FE811 /* AppDelegate.swift */; };
 		9051E28828AF6E9D005FE811 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9051E28728AF6E9D005FE811 /* SceneDelegate.swift */; };
 		9051E28A28AF6E9D005FE811 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9051E28928AF6E9D005FE811 /* ViewController.swift */; };
@@ -41,9 +41,9 @@
 		903603A028B2045400ADD4D2 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		903603A228B204EF00ADD4D2 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		903603A628B211FA00ADD4D2 /* ImageSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchView.swift; sourceTree = "<group>"; };
-		903603A828B213F900ADD4D2 /* CustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionView.swift; sourceTree = "<group>"; };
 		903603AA28B21B2700ADD4D2 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		903603B228B228CB00ADD4D2 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		903C537B28B319E200EF8608 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		9051E28228AF6E9D005FE811 /* CodeBaseAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeBaseAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9051E28528AF6E9D005FE811 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9051E28728AF6E9D005FE811 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +83,14 @@
 			path = Assignment;
 			sourceTree = "<group>";
 		};
+		903C537A28B319D200EF8608 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				903C537B28B319E200EF8608 /* RealmModel.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		9051E27928AF6E9D005FE811 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +111,7 @@
 		9051E28428AF6E9D005FE811 /* CodeBaseAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				903C537A28B319D200EF8608 /* Realm */,
 				9051E28528AF6E9D005FE811 /* AppDelegate.swift */,
 				9051E28728AF6E9D005FE811 /* SceneDelegate.swift */,
 				9036039828B1F16D00ADD4D2 /* Assignment */,
@@ -163,7 +172,6 @@
 				9051E2BD28B14536005FE811 /* DiaryView.swift */,
 				903603A028B2045400ADD4D2 /* CollectionViewController.swift */,
 				903603A628B211FA00ADD4D2 /* ImageSearchView.swift */,
-				903603A828B213F900ADD4D2 /* CustomCollectionView.swift */,
 				903603B228B228CB00ADD4D2 /* CustomCollectionViewCell.swift */,
 			);
 			path = Diary;
@@ -258,7 +266,6 @@
 				9051E28A28AF6E9D005FE811 /* ViewController.swift in Sources */,
 				903603A328B204EF00ADD4D2 /* Protocol.swift in Sources */,
 				9051E2BC28B14420005FE811 /* DiaryViewController.swift in Sources */,
-				903603A928B213F900ADD4D2 /* CustomCollectionView.swift in Sources */,
 				9051E2A128AF7B16005FE811 /* BaseVC.swift in Sources */,
 				9051E29D28AF6FE6005FE811 /* UIViewCutom.swift in Sources */,
 				9036039728B1EF3100ADD4D2 /* URL+Extension.swift in Sources */,
@@ -269,6 +276,7 @@
 				9051E2A328AF7FB1005FE811 /* WriteView.swift in Sources */,
 				9036039528B1EE0A00ADD4D2 /* APIKEY.swift in Sources */,
 				9051E2A728AF8BDC005FE811 /* Type.swift in Sources */,
+				903C537C28B319E200EF8608 /* RealmModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

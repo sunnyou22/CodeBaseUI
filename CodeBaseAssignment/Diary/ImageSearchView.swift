@@ -12,15 +12,17 @@ class ImageSearchView: BaseView {
     let searchBar: UISearchBar = {
         let view = UISearchBar()
         view.placeholder = "원하시는 사진의 키워드를 입력해주세요."
-        
+       
         return view
     }()
     
     let collectionView: UICollectionView = {
+        let itemCount: CGFloat = 3
         print(#function)
+        
         let layout = UICollectionViewFlowLayout()
         let spacing: CGFloat = 9
-        let width = UIScreen.main.bounds.width - (spacing * 4)
+        let width = (UIScreen.main.bounds.width - (spacing * 4)) / itemCount
         layout.itemSize = CGSize(width: width, height: width)
         layout.scrollDirection = .vertical
         layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
@@ -33,12 +35,12 @@ class ImageSearchView: BaseView {
     }()
     
     override init(frame: CGRect) {
-          super.init(frame: frame)
-      }
-
-      required init?(coder: NSCoder) {
-          fatalError("init(coder:) has not been implemented")
-      }
+        super.init(frame: frame)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func configureUI() {
         backgroundColor = .brown
@@ -48,8 +50,7 @@ class ImageSearchView: BaseView {
     override func setConstaints() {
         searchBar.snp.makeConstraints { make in
             
-            make.top.leading.trailing.equalToSuperview()
-            
+            make.top.leading.trailing.equalTo(self.safeAreaLayoutGuide).offset(0)
         }
         
         collectionView.snp.makeConstraints { make in
@@ -58,5 +59,5 @@ class ImageSearchView: BaseView {
             make.bottom.equalToSuperview().offset(0)
         }
     }
-    }
+}
 

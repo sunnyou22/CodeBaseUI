@@ -24,7 +24,6 @@ class CustomCollectionViewCell: BaseCollectionViewCell {
     override func setConstraints() {
         
         imageView.snp.makeConstraints { make in
-            
             make.top.leading.trailing.bottom.equalTo(self)
            
         }

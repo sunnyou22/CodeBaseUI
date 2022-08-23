@@ -30,6 +30,9 @@ class DiaryViewController: BaseViewContoller {
     
     override func setnavigationBar() {
         navigationItem.title = "선우의 다이어리"
+        
+        navigationItem.leftBarButtonItem
+        
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.brown]
 //        navigationController?.navigationBar.tintColor = .brown => 왜 안되지
 

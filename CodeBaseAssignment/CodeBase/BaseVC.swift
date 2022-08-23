@@ -15,6 +15,7 @@ class BaseViewContoller: UIViewController {
         
         configure()
         setnavigationBar()
+        
     }
     
     func configure() { }
